@@ -1,4 +1,4 @@
-package com.Greet.Griting.App;
+package com.Greet.Griting.App.GreetController;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -25,5 +25,5 @@ public class GreetingController {
     public String deleteGreeting() {
         return "{\"message\": \"Greeting deleted!\"}";
     }
-
+      
 }

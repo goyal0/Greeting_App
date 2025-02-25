@@ -1,32 +1,33 @@
 package com.Greet.Griting.App.GreetController;
 
 import com.Greet.Griting.App.Model.Greeting;
+import com.Greet.Griting.App.Service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.Greet.Griting.App.Service.GreetingService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/greeting")
 public class GreetingController {
-
     @GetMapping
-    public String getGreeting() {
-        return "{\"message\": \"Hello World\"}";
+    public String greeting() {
+        return "{\"message\":\"Hello World!\"}";
     }
 
     @PostMapping
-    public String postGreeting() {
-        return "{\"message\": \"Greeting received!\"}";
+    public String greetingPost() {
+        return "{\"message\":\"Greeting Received\"}";
     }
 
     @PutMapping
-    public String putGreeting() {
-        return "{\"message\": \"Greeting updated!\"}";
+    public String greetingPut() {
+        return "{\"message\":\"Greeting Updated\"}";
     }
 
     @DeleteMapping
-    public String deleteGreeting() {
-        return "{\"message\": \"Greeting deleted!\"}";
+    public String greetingDelete() {
+        return "{\"message\":\"Greeting Deleted\"}";
     }
 
     @Autowired
@@ -55,4 +56,11 @@ public class GreetingController {
     public Greeting getGreetingById(@PathVariable Long id) {
         return greetingService.getGreetingById(id);
     }
+    
+    @GetMapping("/all")
+    public List<Greeting> getAllGreetings() {
+        return greetingService.getAllGreetings();
+    }
+
+
 }

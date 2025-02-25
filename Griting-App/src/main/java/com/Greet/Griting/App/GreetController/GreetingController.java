@@ -50,4 +50,7 @@ public class GreetingController {
     public Greeting saveGreeting(@RequestBody String message) {
         return greetingService.saveGreeting(message);
     }
+
+    //hello
+
 }

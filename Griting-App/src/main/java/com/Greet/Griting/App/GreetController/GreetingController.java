@@ -26,5 +26,4 @@ public class GreetingController {
         return "{\"message\": \"Greeting deleted!\"}";
     }
 
-
 }

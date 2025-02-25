@@ -25,5 +25,6 @@ public class GreetingController {
     public String deleteGreeting() {
         return "{\"message\": \"Greeting deleted!\"}";
     }
-      
+
+
 }
